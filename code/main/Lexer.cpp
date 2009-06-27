@@ -95,7 +95,10 @@ vector<string> Lexer::SplitLines(const string &data)
 			}
 
 			if((*c == '\r' || *c == '\n') && comment)
-					comment = false;
+			{
+				s.clear();
+				comment = false;
+			}
 			break;
 		default:
 			s += *c;

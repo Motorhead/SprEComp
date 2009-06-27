@@ -29,7 +29,7 @@ public:
 	TTag(const std::string &v);
 	TTag(const TTag &t);
 	TTag();
-	virtual ~TTag();
+	~TTag();
 	std::string GetValue();
 	bool operator==(const TTag &b);
 

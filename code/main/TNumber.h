@@ -29,7 +29,7 @@ class TNumber :
 public:
 	TNumber(const std::string &v);
 	TNumber();
-	virtual ~TNumber();
+	~TNumber();
 	unsigned short GetValue();
 private:
 	unsigned short value;

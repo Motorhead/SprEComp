@@ -28,7 +28,7 @@ class TCommand :
 public:
 	TCommand(const std::string &v);
 	TCommand();
-	virtual ~TCommand();
+	~TCommand();
 	std::string GetValue();
 	bool operator==(const TCommand &b);
 

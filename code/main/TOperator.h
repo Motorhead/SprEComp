@@ -29,7 +29,7 @@ class TOperator :
 public:
 	TOperator(const std::string &v);
 	TOperator();
-	virtual ~TOperator();
+	~TOperator();
 	bool operator==(const TOperator& b);
 	std::string GetValue();
 private:

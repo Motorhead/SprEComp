@@ -29,7 +29,7 @@ class TString :
 public:
 	TString(const std::string &v);
 	TString();
-	virtual ~TString();
+	~TString();
 	std::string GetValue();
 private:
 	std::string value;

@@ -29,7 +29,7 @@ class SizeError :
 public:
 	SizeError(const std::string &e);
 	~SizeError();
-	virtual const char* what();
+	const char* what();
 private:
 	std::string error;
 };

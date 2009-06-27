@@ -29,7 +29,7 @@ class SyntaxError :
 public:
 	SyntaxError(const std::string &s);
 	~SyntaxError();
-	virtual const char* what();
+	const char* what();
 private:
 	std::string error;
 };

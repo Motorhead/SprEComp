@@ -29,7 +29,7 @@ class ILError :
 public:
 	ILError(const std::string &e);
 	~ILError();
-	virtual const char* what();
+	const char* what();
 
 private:
 	std::string error;

@@ -29,7 +29,7 @@ class TDirective :
 public:
 	TDirective(const std::string &v);
 	TDirective();
-	virtual ~TDirective();
+	~TDirective();
 	std::string GetValue();
 	bool operator==(const TDirective &b);
 

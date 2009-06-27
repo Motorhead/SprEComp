@@ -29,7 +29,7 @@ class TName :
 public:
 	TName(const std::string &v);
 	TName();
-	virtual ~TName();
+	~TName();
 	std::string GetValue();
 	bool operator==(const TName &b);
 

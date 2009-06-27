@@ -121,6 +121,8 @@ void Compiler::SaveToFile(const string &filename)
 
 	output << "};" << endl;
 
+	output << endl << "int " + filename + "_sprite_size = " << parser.spreData->sprite.size() << ";" << endl;
+
 	output << endl << "Sprite " + filename + "_sprite = {";
 	for(unsigned int i = 0; i < parser.spreData->sprite.size(); i++)
 	{

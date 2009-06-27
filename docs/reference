@@ -1,0 +1,57 @@
+SprEComp
+
+The language has a syntax very similar to ASM. I'll start with some definitions:
+	Image		a file which should be in the same folder as your code. Many 
+				formats are supported. For more information look at DevIL's 
+				documentation.
+				
+	Frame		a frame is any portion of an image.
+	
+	Sprite		a sprite is a sequence of frames.
+	
+	Tag			a tag is a place you defined in the code where you can jump to. 
+				Tags can only be placed before a 'ren' statement.
+				
+The language consists of two directives: img and frm, and two instructions: ren
+and jmp. SprEComp code files must be saved with the extension: '.s'. You cannot 
+place directives after the first instruction has been written.  Anything after a
+';' is considered as a comment, and thus ignored by the compiler.
+
+	img
+		syntax: img image_name, location
+			image_name 		Identifier for this image.
+			location		String containing the name of the file, along with
+							its extension.
+							
+		example: img flower, "flower.jpg"
+		
+	
+	frm
+		syntax: frm frame_name, image, x, y, w, h, duration
+		
+			frame_name		Identifier for this frame.
+			image			Image (must be declared before the frame)
+			x				X position in the image where the frame starts.
+			y				Y position in the image where the frame starts.
+			w				Width of the frame, starting from x.
+			h				Height of the frame, starting from y.
+			duration		Duratio of this frame in miliseconds.
+
+		example: frm first, flower, 0, 0, 10, 20, 250
+		
+	ren
+		syntax: ren frame
+				ren frame, duration
+			frame		Frame to render
+			duration	Render with a different duration, in miliseconds.
+				
+		example: ren first
+				 ren first, 300
+				 
+	
+	jmp
+		syntax: jmp tag
+				tag		Jump to... tag.
+				
+								
+See the examples folder.
